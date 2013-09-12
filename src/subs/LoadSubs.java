@@ -35,58 +35,32 @@ public class LoadSubs {
 		try {
 			
 			while ((line = br.readLine()) != null) {
-				//System.out.println("BEFORE STUFF: Current ID: "+ id + " Current FromTime: " + fromTime +  " CF: " + fromFrame +  " Current ToTime: " + toTime + " TF: " + toFrame);
-			    if( line.equals(""))
+				if( line.equals(""))
 			    {
-			    	//System.out.println("Line nr: " + x);
-			    	//System.out.println("Current ID: "+ id + " Current FromTime: " + fromTime +  " CF: " + fromFrame +  " Current ToTime: " + toTime + " TF: " + toFrame);
-			    	//System.out.println("---------------And just before we save the sub... The sub-size: " + tempsubs.size());
-			    	//System.out.println("---------------Ok one more test... "+ tempsubs.get(0));
 			    	subs.add(new Sub(id, fromTime, toTime, new ArrayList<String>(tempsubs)));
-			    	//System.out.println("Sub integrity: " + subs.get(subs.size()-1).checkIntegrity());
-			    	/*System.out.println("ID: " + subs.get(subs.size()-1).getId() + "\nFrom Time: " + subs.get(subs.size()-1).getFromTime().getSecondOfMinute()+ "\nTo Time: " +  subs.get(subs.size()-1).getToTime().getSecondOfMinute()+ "\nText: ");
-			    	ArrayList<String> text = subs.get(subs.size()-1).getText();
-			    	for(String lajn : text)
-			    	{
-			    		System.out.println(lajn);
-			    	}*/
 			    	tempsubs.clear();
 			    	id = 0;
 			    	fromTime = "";
-			    	//fromFrame = 0;
 			    	toTime = "";
-			    	//toFrame = 0;
-			    	//break;
 			    }
 			    else
 			    {
-			    	
-			    	//System.out.println("Line nr: " + x + " " + line);
 			    	if(id <= 0)
 			    	{
 			    		id = Integer.parseInt(line);
-			    		//System.out.println("Cool ID: " + id);
 			    	}
 			    	else if(id > 0 && fromTime == "")
 			    	{
-			    		//System.out.println("Splitting");
 			    		fromTime = line.split("\\s+")[0];
 			    		fromTime = fromTime.replace(",", ".");
-			    		//fromFrame = Integer.parseInt(line.split("\\s+")[0].split(",")[1]);
-			    		
 			    		toTime = line.split("\\s+")[2];
 			    		toTime = toTime.replace(",", ".");
-			    		//toFrame = Integer.parseInt(line.split("\\s+")[2].split(",")[1]);
 			    	}
 			    	else if(id > 0 && fromTime!= "")
 			    	{
-			    		//System.out.println("And here we add the subs to the shittsle");
-			    		//System.out.println(line);
 			    		tempsubs.add(line);
 			    	}
 			    }
-			    //x++;
-			    //System.out.println("Current ID: "+ id + " Current FromTime: " + fromTime +  " CF: " + fromFrame +  " Current ToTime: " + toTime + " TF: " + toFrame);
 			}
 			
 		} catch (IOException e) {

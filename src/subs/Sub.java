@@ -7,11 +7,7 @@ import java.util.TimeZone;
 
 public class Sub {
 	private int id;
-	//private String fromTime;
-	//private DateTime fromTime;
 	private Date fromTime;
-	//private String toTime;
-	//private DateTime toTime;
 	private Date toTime;
 	private ArrayList<String> text;
 	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
@@ -49,8 +45,6 @@ public class Sub {
 		this.id = id;
 		this.text = text;
 		try {
-			//this.fromTime = new DateTime("1970-01-01T"+fromTime+"+01:00");
-			//this.toTime = new DateTime("1970-01-01T"+toTime+"+01:00");
 			this.fromTime = sdf.parse("1970-01-01 " + fromTime);
 			if(this.fromTime.getTime() < 0)
 			{
