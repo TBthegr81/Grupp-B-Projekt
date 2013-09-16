@@ -16,7 +16,7 @@ public class Cheating {
 			System.out.println("Stuff fucked up");
 			System.exit(1);
 		}
-		PlayMovie movie = new PlayMovie(subs);
+		PlayMovie movie = new PlayMovie(subs,0);
 		
 		movie.run();
 	}

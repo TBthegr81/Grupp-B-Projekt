@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class PlayMovie {
 	private int subsDone;
 	private ArrayList<Sub> subs;
-	public PlayMovie(ArrayList<Sub> subs)
+	public PlayMovie(ArrayList<Sub> subs, int startSubID)
 	{
 		this.subs = subs;
-		subsDone = 0;
+		subsDone = startSubID;
 	}
 	
 	public void run()

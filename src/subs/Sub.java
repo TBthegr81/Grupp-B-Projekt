@@ -63,9 +63,4 @@ public class Sub {
     	}
 	}
 	
-	public boolean checkIntegrity()
-	{
-		if(text.isEmpty()) return false;
-		else return true;
-	}
 }

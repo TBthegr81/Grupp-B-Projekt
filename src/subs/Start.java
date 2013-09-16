@@ -13,12 +13,38 @@ public class Start {
 		}
 		else
 		{
-			System.out.println("Stuff fucked up");
+			System.out.println("Shit fucked up!");
 			System.exit(1);
 		}
-		PlayMovie movie = new PlayMovie(subs);
+		int subsId = getSubIDFromLine("But eventually, it'll crack...").get(0);
+		System.out.println("Starting movie at: " + subs.get(subsId).getFromTime());
+		PlayMovie movie = new PlayMovie(subs,subsId);
 		
 		movie.run();
+	}
+	
+	private static ArrayList<Integer> getSubIDFromLine(String line)
+	{
+		int id = 0;
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		for(int i = 0; i < subs.size(); i++)
+		{
+			ArrayList<String> words = subs.get(i).getText();
+			for(int j = 0; j < words.size(); j++)
+			//if(subs.get(i).getText().contains(line))
+			{
+				if(words.get(j).contains(line))
+				{
+					result.add(id = subs.get(i).getId());
+				}
+				
+			}
+		}
+		if(id == 0)
+		{
+			System.out.println("Could not find line in Subsfile");
+		}
+		return result;
 	}
 
 }
