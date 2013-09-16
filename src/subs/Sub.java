@@ -41,7 +41,7 @@ public class Sub {
 	public Sub(int id, String fromTime, String toTime,  ArrayList<String> text)
 	{
 		sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-		System.out.println("FromTime: " + fromTime + " ToTime: " + toTime);
+		//System.out.println("FromTime: " + fromTime + " ToTime: " + toTime);
 		this.id = id;
 		this.text = text;
 		try {
@@ -56,10 +56,10 @@ public class Sub {
 			System.err.println("Cant parse time! " + toTime + " "+ e.getLocalizedMessage());
 		}
 		
-		System.out.println("Sub ID: " + id + "\nfromTime: " + this.fromTime.getTime() + "\nToTime: " + this.toTime.getTime());
+		//System.out.println("Sub ID: " + id + "\nfromTime: " + this.fromTime.getTime() + "\nToTime: " + this.toTime.getTime());
 		for(int i = 0; i > text.size(); i++)
     	{
-    		System.out.println("Line " + i + " " + text.get(i));
+    		//System.out.println("Line " + i + " " + text.get(i));
     	}
 	}
 	
