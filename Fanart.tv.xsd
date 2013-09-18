@@ -1,0 +1,180 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="fanart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="movie">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hdmoviecleararts">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="hdmovieclearart" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:int" name="id" use="optional"/>
+                            <xs:attribute type="xs:anyURI" name="url" use="optional"/>
+                            <xs:attribute type="xs:string" name="lang" use="optional"/>
+                            <xs:attribute type="xs:byte" name="likes" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="hdmovielogos">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="hdmovielogo" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:int" name="id" use="optional"/>
+                            <xs:attribute type="xs:anyURI" name="url" use="optional"/>
+                            <xs:attribute type="xs:string" name="lang" use="optional"/>
+                            <xs:attribute type="xs:byte" name="likes" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="movieposters">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="movieposter" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:int" name="id" use="optional"/>
+                            <xs:attribute type="xs:anyURI" name="url" use="optional"/>
+                            <xs:attribute type="xs:string" name="lang" use="optional"/>
+                            <xs:attribute type="xs:byte" name="likes" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="movielogos">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="movielogo" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="id" use="optional"/>
+                            <xs:attribute type="xs:anyURI" name="url" use="optional"/>
+                            <xs:attribute type="xs:string" name="lang" use="optional"/>
+                            <xs:attribute type="xs:byte" name="likes" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="moviearts">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="movieart" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:short" name="id" use="optional"/>
+                            <xs:attribute type="xs:anyURI" name="url" use="optional"/>
+                            <xs:attribute type="xs:string" name="lang" use="optional"/>
+                            <xs:attribute type="xs:byte" name="likes" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="moviediscs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="moviedisc" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:short" name="id" use="optional"/>
+                            <xs:attribute type="xs:anyURI" name="url" use="optional"/>
+                            <xs:attribute type="xs:string" name="lang" use="optional"/>
+                            <xs:attribute type="xs:byte" name="likes" use="optional"/>
+                            <xs:attribute type="xs:byte" name="disc" use="optional"/>
+                            <xs:attribute type="xs:string" name="disc_type" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="moviethumbs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="moviethumb" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:int" name="id" use="optional"/>
+                            <xs:attribute type="xs:anyURI" name="url" use="optional"/>
+                            <xs:attribute type="xs:string" name="lang" use="optional"/>
+                            <xs:attribute type="xs:byte" name="likes" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="moviebackgrounds">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="moviebackground" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:int" name="id" use="optional"/>
+                            <xs:attribute type="xs:anyURI" name="url" use="optional"/>
+                            <xs:attribute type="xs:string" name="lang" use="optional"/>
+                            <xs:attribute type="xs:byte" name="likes" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="moviebanners">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="moviebanner" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:short" name="id" use="optional"/>
+                            <xs:attribute type="xs:anyURI" name="url" use="optional"/>
+                            <xs:attribute type="xs:string" name="lang" use="optional"/>
+                            <xs:attribute type="xs:byte" name="likes" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name"/>
+            <xs:attribute type="xs:short" name="id"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

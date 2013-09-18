@@ -15,7 +15,7 @@ public class PlayMovie {
 	{
 		System.out.println("Movie: The Matrix");
 		System.out.println("Movie starts in: ");
-		for(int countdown = 5; countdown > 0; countdown--)
+		for(int countdown = 0; countdown > 0; countdown--)
 		{
 			System.out.println(countdown);
 			try {

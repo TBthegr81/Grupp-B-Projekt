@@ -34,6 +34,7 @@ public class MovieLoader {
 		        {
 		        	System.out.println(m.getTitle() + "\nDir: " + m.getDirector()  + "\nWrt: " + m.getWriter()  + "\nAct: " + m.getActors()  + "\nPlt: " + m.getPlot() + "\nGnr: " + m.genre + "\nRls: " + m.getReleased());
 		        }
+		        System.out.println("Data from The Open Movie Database API - www.omdbapi.com");
 			} catch (JAXBException e) {
 				e.printStackTrace();
 			} catch (MalformedURLException e) {

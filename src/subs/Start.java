@@ -2,6 +2,8 @@ package subs;
 
 import java.util.ArrayList;
 
+import tb.CLib;
+
 public class Start {
 	private static ArrayList<Sub> subs = new ArrayList<Sub>();
 
@@ -16,7 +18,7 @@ public class Start {
 			System.out.println("Shit fucked up!");
 			System.exit(1);
 		}
-		int subsId = getSubIDFromLine("But eventually, it'll crack...").get(0);
+		int subsId = getSubIDFromLine(CLib.input("quote from movie")).get(0);
 		System.out.println("Starting movie at: " + subs.get(subsId).getFromTime());
 		PlayMovie movie = new PlayMovie(subs,subsId);
 		
