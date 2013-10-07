@@ -35,6 +35,7 @@ public class LoadSubs {
 		try {
 			
 			while ((line = br.readLine()) != null) {
+				
 				if( line.equals(""))
 			    {
 			    	subs.add(new Sub(id, fromTime, toTime, new ArrayList<String>(tempsubs)));
